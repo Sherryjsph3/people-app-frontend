@@ -13,7 +13,7 @@ function Main(props) {
     const [ people, setPeople] = useState(null);
 
     //function to make the api call for people
-    const URL = "https://backend-react-lab.herokuapp.com/people/";
+    const URL = "http://localhost:4000/people/";
 
     //fetch people data from the backend
     const getPeople = async () => {
