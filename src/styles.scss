@@ -1,0 +1,75 @@
+// --------------------------
+// VARIABLES
+// --------------------------
+//allow  you to write the main color in a theme in one place
+
+$maincolor: black;
+$constrastcolor: white;
+
+//Mixins -- predefined styles -- a theme
+@mixin white-text-black-bg {
+    color: $constrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-text-white-bg {
+    color: $maincolor;
+    background-color: $constrastcolor;
+}
+
+//Body Styles
+body {
+    margin: 0;
+
+}
+// --------------------------
+// Header
+// --------------------------
+nav {
+    @include white-text-black-bg;
+    display: flex;
+    justify-content: flex-start;
+    a {
+        @include white-text-black-bg;
+        text-decoration: none;
+        font-family: Helvetica;
+        div {
+            margin: 10px;
+            font-size: large;
+        }
+    }
+}
+
+// --------------------------
+// Form
+// --------------------------
+section, div {
+    form {
+        input {
+            @include white-text-black-bg;
+            padding: 10px;
+            font-size: 1.1em;
+            margin: 10px;
+        }
+    }
+}
+
+// --------------------------
+// button
+// --------------------------
+button {
+    @include white-text-black-bg;
+    display: block;
+    margin: auto;
+    font-size: 1.3em;
+    padding: 10px;
+}
+// --------------------------
+// images
+// --------------------------
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 90px;
+    object-fit: cover;
+}
